@@ -6,18 +6,20 @@ window.onscroll = function () {
     scrollFunction();
 };
 
-topBtn.style.display = 'none';
+// topBtn.style.display = 'none';
 
 function scrollFunction() {
     if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
+        document.body.scrollTop > 500 ||
+        document.documentElement.scrollTop > 500
     ) {
         topBtn.style.display = 'block';
     } else {
         topBtn.style.display = 'none';
     }
 }
+
+scrollFunction();
 
 // -----------------------------------------------------------------------
 

@@ -17,3 +17,13 @@ function closeMenu() {
     document.body.classList.remove('menu-opened');
     document.body.classList.add('menu-closed');
 }
+
+document.addEventListener(
+    'click',
+    e => {
+        const isClickedNav = e.target.matches('nav') || e.target.closest('nav');
+        if (document.body.classList.contains('menu-opened') && !isClickedNav)
+            closeMenu();
+    },
+    { capture: true }
+);

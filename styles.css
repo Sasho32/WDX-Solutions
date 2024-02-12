@@ -720,6 +720,8 @@ img#go-to-the-top {
     width: 35px;
     border-radius: 3rem;
     z-index: 100;
+    display: none;
+    /* to not show initially */
 }
 /* top button */
 

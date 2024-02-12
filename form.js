@@ -134,6 +134,18 @@ serviceDropdown.addEventListener('click', e => {
     }
 });
 
+document.addEventListener('click', e => {
+    const isDropdownInputClicked =
+        e.target.matches('div#service-input') ||
+        e.target.closest('div#service-input');
+    if (
+        !isDropdownInputClicked &&
+        serviceDropdown.classList.contains('opened')
+    ) {
+        serviceDropdown.classList.remove('opened');
+    }
+});
+
 const dialogBtn = document.querySelector('div#dialog > button');
 
 dialogBtn.addEventListener('click', () =>
