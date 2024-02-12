@@ -10,6 +10,8 @@ function updateScrollPadding() {
         '--scroll-padding',
         navigationHeight + 'px'
     );
+
+    console.log(navigationHeight + 'px');
 }
 
 // Initial call to set scroll padding on page load

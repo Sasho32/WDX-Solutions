@@ -6,7 +6,8 @@
     font-style: normal;
     font-variation-settings: 'wdth' 100;
     scroll-behavior: smooth;
-    scroll-padding: var(--scroll-padding, 50px);
+    --scoll-padding: 64px;
+    scroll-padding: calc(var(--scroll-padding) + 5px);
     box-sizing: border-box;
 }
 
@@ -76,6 +77,7 @@ body {
 /* side social icons */
 body.show-side-socials #side-socials {
     display: flex;
+    z-index: 1;
 }
 
 div#side-socials {
@@ -117,7 +119,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-input);
     padding: 0.8rem;
     z-index: 12;
 }
@@ -336,7 +338,7 @@ section#social-media-icons > a > i {
         transform: translateY(-20%);
     }
 
-    i#go-to-the-top:hover {
+    img#go-to-the-top:hover {
         cursor: pointer;
         scale: 1.2;
     }
@@ -672,8 +674,9 @@ section#quiz-app > section a {
     text-decoration: none;
     align-self: flex-start;
     border-radius: 3rem;
-    padding: 0.5rem 2.5rem;
+    padding: 0.5rem 1rem;
     font-weight: 500;
+    font-size: var(--fs-p);
 }
 /* quiz app */
 
@@ -708,13 +711,14 @@ footer .logo > span {
 /* social media fixed */
 
 /* top button */
-i#go-to-the-top {
+img#go-to-the-top {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
-    font-size: 2rem;
     transition: all 200ms;
-    color: var(--orange-cl);
+    box-shadow: var(--box-shadow-input);
+    width: 35px;
+    border-radius: 3rem;
     z-index: 100;
 }
 /* top button */
@@ -757,8 +761,6 @@ form {
 
     container-type: inline-size;
     container-name: form;
-
-    position: relative;
 }
 
 form h2 {
@@ -821,7 +823,7 @@ form div#service-input.opened > #service-options {
 }
 
 .option {
-    padding: 1rem;
+    padding: 0.7rem;
 }
 
 .option.selected,
@@ -862,7 +864,7 @@ form #error {
     display: none;
 }
 
-.input-field > *:nth-child(2).error + #error {
+.input-field:has(.error) > #error {
     display: block;
 }
 
@@ -1010,8 +1012,9 @@ div#dialog > button {
 
 @media (width < 1000px) {
     * {
-        --scroll-padding-m: 64.8px;
-        scroll-padding: var(--scroll-padding-m);
+        /* --scroll-padding-m: 64.8px; */
+        --scroll-padding-m: 0rem;
+        scroll-padding: calc(var(--scroll-padding-m) + 0.5rem);
     }
 
     /* side social icons */
@@ -1085,8 +1088,9 @@ div#dialog > button {
 
     /* mobile logo */
     #mobile-logo {
-        display: block;
+        display: inline-block;
         padding: 1rem;
+        align-self: flex-start;
     }
     /* mobile logo */
 
@@ -1381,7 +1385,7 @@ div#dialog > button {
         padding-inline: 1rem;
         align-self: flex-end;
         /* margin-inline-end: 1.6rem; */
-        z-index: 101;
+        /* z-index: 101; */
         /* in order not to lay over the top btn */
     }
     /* quiz app */
@@ -1401,8 +1405,8 @@ div#dialog > button {
     /* footer */
 
     /* top button */
-    i#go-to-the-top {
-        font-size: 1.5rem;
+    img#go-to-the-top {
+        width: 30px;
     }
     /* top button */
 
@@ -1460,8 +1464,12 @@ div#dialog > button {
     form button {
         position: relative;
         font-size: 1rem;
-        z-index: 101;
+        /* z-index: 101; */
         /* for the top button */
+    }
+
+    form #error {
+        font-size: 0.8rem;
     }
 
     div#success-message {

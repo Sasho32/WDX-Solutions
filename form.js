@@ -30,7 +30,9 @@ form.addEventListener('submit', e => {
     form.classList.add('loading');
 
     Array.from(
-        document.querySelectorAll('.input-field > :nth-child(2)')
+        document.querySelectorAll(
+            '.input-field > input, .input-field > div#service-input'
+        )
     ).forEach(input => input.classList.remove('error'));
 
     if (!emailValidator(document.querySelector('[name="email"]').value)) {
