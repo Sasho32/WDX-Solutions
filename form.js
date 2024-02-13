@@ -4,8 +4,6 @@ function emailValidator(email) {
     // Regular expression pattern for email validation
     const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    console.log(pattern.test(email));
-
     // Check if the email matches the pattern
     return pattern.test(email);
 }

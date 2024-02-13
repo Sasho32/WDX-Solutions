@@ -149,8 +149,8 @@ div#side-socials img {
     /* background-color: red; */
 }
 
-strong {
-    font-weight: bold;
+p > strong {
+    font-weight: 600;
 }
 
 /* nav */
@@ -491,9 +491,10 @@ section#about-me > article:nth-child(4) {
 }
 
 section#about-me h3 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     letter-spacing: -2px;
     line-height: 1.2;
+    font-weight: 600;
 }
 
 section#about-me p {
@@ -821,6 +822,7 @@ form textarea {
     border: none;
     background-color: var(--graphite-cl-lighten);
     box-shadow: var(--box-shadow-input);
+    font-size: 1.3rem;
 }
 
 form div#service-input {
@@ -864,6 +866,7 @@ form div#service-input.opened > #service-options {
 
 .option {
     padding: 0.7rem;
+    font-size: 1.3rem;
 }
 
 .option.selected {
@@ -899,7 +902,7 @@ form button {
 }
 
 form #error {
-    color: var(--orange-cl);
+    color: var(--error-red);
     display: none;
 }
 
@@ -936,13 +939,8 @@ label {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* color: #fff; */
-    /* color: #ff5e00; */
     color: var(--graphite-cl);
     font-size: 1.3rem;
-}
-
-label > i {
 }
 
 form.loading .loader {
@@ -1091,20 +1089,6 @@ div#dialog > button {
         font-size: 1.7rem;
         letter-spacing: -2px;
         padding-inline-end: 5px;
-    }
-
-    .main-heading:not(h1) {
-        /* border-top: 1px solid; */
-        /* border-bottom: 1px solid; */
-        /* padding-block: 0.5rem; */
-    }
-
-    h2.main-heading {
-        transition: clip-path 5s ease;
-    }
-
-    h2.main-heading.hidden {
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Clip from top */
     }
 
     /* nav */
@@ -1302,8 +1286,7 @@ div#dialog > button {
 
     section#about-me h3 {
         font-size: 1.4rem;
-        letter-spacing: -2px;
-        line-height: 1.2;
+        letter-spacing: -1px;
     }
 
     section#about-me p {
@@ -1353,16 +1336,12 @@ div#dialog > button {
         transform: translate(44px, -40%) rotate(0);
     }
 
-    section#expertise #coorporate {
-    }
-
     section#expertise > .heading-reveal {
         display: grid;
         align-self: flex-start;
     }
 
     section#expertise #coorporate > .heading-reveal {
-        /* align-self: flex-start; */
         display: none;
     }
 
@@ -1449,9 +1428,7 @@ div#dialog > button {
     section#quiz-app > section a {
         padding-inline: 1rem;
         align-self: flex-end;
-        /* margin-inline-end: 1.6rem; */
-        /* z-index: 101; */
-        /* in order not to lay over the top btn */
+        font-size: 1rem;
     }
     /* quiz app */
 

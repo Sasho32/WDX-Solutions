@@ -1,7 +1,5 @@
 function updateScrollPadding() {
-    console.log(window.innerWidth);
     if (window.innerWidth < 1000) {
-        console.log('kei');
         return;
     }
 
@@ -10,8 +8,6 @@ function updateScrollPadding() {
         '--scroll-padding',
         navigationHeight + 'px'
     );
-
-    console.log(navigationHeight + 'px');
 }
 
 // Initial call to set scroll padding on page load
