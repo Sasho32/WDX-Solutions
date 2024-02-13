@@ -375,6 +375,10 @@ section#social-media-icons > a > i {
     .option:hover {
         background-color: hsl(0, 0%, 90%);
     }
+
+    form button {
+        cursor: pointer;
+    }
 }
 /* hero page */
 
