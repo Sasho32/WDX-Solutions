@@ -76,17 +76,21 @@ body {
 
 /* side social icons */
 body.show-side-socials #side-socials {
-    display: flex;
     z-index: 1;
+    transform: translateY(-50%);
+    opacity: 1;
 }
 
 div#side-socials {
-    display: none;
+    /* display: none; */
+    display: flex;
     flex-direction: column;
     position: fixed;
     left: 0;
     top: 50%;
-    transform: translateY(-50%);
+    /* transform: translateX(-1000px); */
+    opacity: 0;
+    transition: all 400ms ease-in-out;
 }
 
 div#side-socials img {
@@ -97,12 +101,52 @@ div#side-socials img {
 }
 /* side social icons */
 
+/* main animation */
+.fade-in.hidden {
+    opacity: 0;
+    transform: translateY(10%);
+}
+
+.fade-in {
+    transition: all 1s ease-in-out;
+    /* opacity: 1; */
+}
+/* main animation */
+
+.heading-reveal.hidden {
+    grid-template-rows: 0fr;
+}
+
+.heading-reveal {
+    display: grid;
+    transition: all 500ms ease-in-out;
+    position: relative;
+    grid-template-rows: 1fr;
+}
+/* 
+.heading-reveal.hidden::before {
+    width: 0;
+}
+
+.heading-reveal::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    transition: width 500ms ease-in-out 500ms;
+    background-color: var(--graphite-cl);
+    width: 100%;
+} */
+
 .main-heading {
+    overflow: hidden;
     font-size: 2.5rem;
     letter-spacing: -2px;
     line-height: 1.2;
     font-weight: 700;
     color: #434343;
+    /* background-color: red; */
 }
 
 strong {
@@ -193,14 +237,14 @@ h1.hidden {
 }
 
 h1 {
-    transition: all 500ms ease-out 500ms;
+    /* transition: all 500ms ease-out 500ms; */
     overflow: hidden;
     border-right: 3px solid transparent;
     white-space: nowrap;
     margin: 0;
     width: 0;
-    animation: typing 2.5s steps(40, end) 500ms forwards,
-        blink-caret 2.5s step-end 500ms forwards;
+    animation: typing 2s steps(40, end) forwards,
+        blink-caret 2s step-end forwards;
     /* Add 'forwards' to keep the final state of the blinking animation */
     transform-origin: left;
 }
@@ -220,22 +264,12 @@ h1 {
     0% {
         border-color: var(--orange-cl);
     }
-    98% {
+    99% {
         border-color: var(--orange-cl);
     }
     100% {
         border-color: transparent;
     }
-}
-
-.fade-in.hidden {
-    opacity: 0;
-    transform: translateY(10%);
-}
-
-.fade-in {
-    transition: all 800ms ease-in-out;
-    opacity: 1;
 }
 
 p.hidden,
@@ -247,7 +281,7 @@ p {
     line-height: 1.5;
     font-size: 1.3rem;
     opacity: 1;
-    transition: all 500ms ease-in-out 1s;
+    transition: all 500ms ease-in-out 500ms;
 }
 
 .orange {
@@ -259,7 +293,7 @@ section#buttons {
     display: flex;
     gap: 1rem;
     opacity: 1;
-    transition: all 1.5s ease-in-out 1s;
+    transition: all 500ms ease-in-out 1000ms;
 }
 
 #primary-btn,
@@ -291,13 +325,9 @@ a#profile-pic > img.hidden {
 a#profile-pic > img {
     width: 400px;
     border-radius: 50%;
-    transition: all 1.5s ease-in-out;
+    transition: all 2s ease-in-out;
     box-shadow: var(--box-shadow);
     display: block;
-}
-
-section#hero > a > img:hover {
-    /* scale: 1; */
 }
 
 section#social-media-icons {
@@ -310,16 +340,16 @@ section#social-media-icons > a.hidden {
 }
 
 section#social-media-icons > a:nth-child(1) {
-    transition: all 800ms ease-in-out 1.6s;
+    transition: all 500ms ease-in-out 1500ms;
 }
 section#social-media-icons > a:nth-child(2) {
-    transition: all 800ms ease-in-out 1.4s;
+    transition: all 400ms ease-in-out 1500ms;
 }
 section#social-media-icons > a:nth-child(3) {
-    transition: all 800ms ease-in-out 1.2s;
+    transition: all 200ms ease-in-out 1500ms;
 }
 section#social-media-icons > a:nth-child(4) {
-    transition: all 800ms ease-in-out 1s;
+    transition: all 100ms ease-in-out 1500ms;
 }
 
 section#social-media-icons > a > i {
@@ -328,11 +358,6 @@ section#social-media-icons > a > i {
 }
 
 @media (pointer: fine) {
-    button:hover {
-        cursor: pointer;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
-    }
-
     section#social-media-icons > a > i:hover {
         /* transform: scale(1.2); */
         transform: translateY(-20%);
@@ -341,6 +366,14 @@ section#social-media-icons > a > i {
     img#go-to-the-top:hover {
         cursor: pointer;
         scale: 1.2;
+    }
+
+    form div#service-input > :hover {
+        cursor: pointer;
+    }
+
+    .option:hover {
+        background-color: hsl(0, 0%, 90%);
     }
 }
 /* hero page */
@@ -367,6 +400,10 @@ section#tech-stack > section {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+}
+
+section#tech-stack .heading-reveal {
+    align-self: center;
 }
 
 section#tech-stack h2 {
@@ -536,11 +573,11 @@ section#expertise img:nth-of-type(3) {
     transition: all 1000ms ease-in-out 700ms;
 }
 
-section#expertise > h2 {
+section#expertise > .heading-reveal {
     display: none;
 }
 
-section#expertise #coorporate > h2 {
+section#expertise #coorporate > .heading-reveal {
     margin-block-end: 2rem;
 }
 
@@ -711,17 +748,22 @@ footer .logo > span {
 /* social media fixed */
 
 /* top button */
+body.show-top-btn img#go-to-the-top {
+    /* transform: translateX(0); */
+    opacity: 1;
+}
+
 img#go-to-the-top {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
-    transition: all 200ms;
     box-shadow: var(--box-shadow-input);
     width: 35px;
     border-radius: 3rem;
     z-index: 100;
-    display: none;
-    /* to not show initially */
+    /* transform: translateX(1000px); */
+    opacity: 0;
+    transition: all 400ms ease-in-out;
 }
 /* top button */
 
@@ -787,10 +829,6 @@ form div#service-input {
     position: relative;
 }
 
-form div#service-input > :hover {
-    cursor: pointer;
-}
-
 form div#service-input > input {
     flex-grow: 1;
 }
@@ -828,8 +866,7 @@ form div#service-input.opened > #service-options {
     padding: 0.7rem;
 }
 
-.option.selected,
-.option:hover {
+.option.selected {
     background-color: hsl(0, 0%, 90%);
 }
 
@@ -1026,15 +1063,40 @@ div#dialog > button {
     }
     /* side social icons */
 
+    .heading-reveal {
+        display: grid;
+        transition: all 500ms ease-in-out 500ms;
+        position: relative;
+        grid-template-rows: 1fr;
+        padding-block: 0.5rem;
+    }
+
+    .heading-reveal.hidden::before {
+        width: 0;
+    }
+
+    .heading-reveal::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        transition: all 500ms ease-in-out;
+        /* transform: translateY(1px); */
+        background-color: var(--graphite-cl);
+        width: 100%;
+    }
+
     .main-heading {
         font-size: 1.7rem;
         letter-spacing: -2px;
+        padding-inline-end: 5px;
     }
 
     .main-heading:not(h1) {
         /* border-top: 1px solid; */
-        border-bottom: 1px solid;
-        padding-block: 0.5rem;
+        /* border-bottom: 1px solid; */
+        /* padding-block: 0.5rem; */
     }
 
     h2.main-heading {
@@ -1131,9 +1193,10 @@ div#dialog > button {
     /* hero page */
     section#hero {
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
+        justify-content: flex-start;
         align-items: center;
-        gap: 2rem;
+        gap: 1rem;
         margin-block-start: 0;
         align-items: center;
         padding-inline: 1rem;
@@ -1177,7 +1240,7 @@ div#dialog > button {
         display: block;
     }
 
-    section#tech-stack h2 {
+    section#tech-stack .heading-reveal {
         align-self: flex-start;
         /* padding-inline-start: 1rem; */
         margin-inline-start: 1rem;
@@ -1212,7 +1275,7 @@ div#dialog > button {
         align-items: center;
     }
 
-    section#about-me h2 {
+    section#about-me .heading-reveal {
         align-self: flex-start;
     }
 
@@ -1293,12 +1356,12 @@ div#dialog > button {
     section#expertise #coorporate {
     }
 
-    section#expertise > h2 {
-        display: block;
+    section#expertise > .heading-reveal {
+        display: grid;
         align-self: flex-start;
     }
 
-    section#expertise #coorporate > h2 {
+    section#expertise #coorporate > .heading-reveal {
         /* align-self: flex-start; */
         display: none;
     }
@@ -1315,7 +1378,7 @@ div#dialog > button {
         padding-inline: 1rem;
     }
 
-    section#strategic-focus > h2 {
+    section#strategic-focus > .heading-reveal {
         align-self: flex-start;
     }
 
@@ -1361,7 +1424,7 @@ div#dialog > button {
         width: 100%;
     }
 
-    section#quiz-app h2 {
+    section#quiz-app .heading-reveal {
         align-self: flex-start;
     }
 

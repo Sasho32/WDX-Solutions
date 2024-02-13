@@ -67,7 +67,7 @@ form.addEventListener('submit', e => {
         return result;
     }, {});
 
-    fetch('https://formsubmit.co/ajax/sashosasho32@gmail.com', {
+    fetch('https://formspree.io/f/xjvnwgyl', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ form.addEventListener('submit', e => {
         })
 
         .then(data => {
-            if (data.success === 'false') throw new Error();
+            // if (data.success === 'false') throw new Error();
 
             document.body.classList.add('success-message');
 
@@ -90,9 +90,11 @@ form.addEventListener('submit', e => {
             }, 4000);
 
             form.reset();
+
             Array.from(document.querySelectorAll('.option')).forEach(option =>
                 option.classList.remove('selected')
             );
+
             updateSymbolsLeft();
         })
         .catch(error => {

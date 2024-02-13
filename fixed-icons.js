@@ -13,9 +13,9 @@ function scrollFunction() {
         document.body.scrollTop > 500 ||
         document.documentElement.scrollTop > 500
     ) {
-        topBtn.style.display = 'block';
+        document.body.classList.add('show-top-btn');
     } else {
-        topBtn.style.display = 'none';
+        document.body.classList.remove('show-top-btn');
     }
 }
 
@@ -23,7 +23,9 @@ scrollFunction();
 
 // -----------------------------------------------------------------------
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', manageSideSocials);
+
+function manageSideSocials() {
     const socialIcons = document.querySelector('section#hero');
 
     // Get the bounding rectangle of the section
@@ -38,4 +40,6 @@ window.addEventListener('scroll', function () {
     } else {
         document.body.classList.add('show-side-socials');
     }
-});
+}
+
+manageSideSocials();
