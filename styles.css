@@ -313,11 +313,15 @@ section#buttons {
     border-radius: 3rem;
 }
 
+#primary-btn {
+    box-shadow: var(--box-shadow-input);
+}
+
 #secondary-btn {
     font-weight: 600;
     background-color: transparent;
-    color: var(--orange-cl);
-    border: 1px solid var(--orange-cl);
+    color: var(--graphite-cl);
+    border: 1px solid;
 }
 
 a#profile-pic > img.hidden {
@@ -714,6 +718,7 @@ section#quiz-app > section a {
     padding: 0.5rem 1rem;
     font-weight: 500;
     font-size: var(--fs-p);
+    box-shadow: var(--box-shadow-input);
 }
 /* quiz app */
 
@@ -884,9 +889,6 @@ textarea {
 form button {
     align-self: flex-end;
     border-radius: 3rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-        rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
     font-weight: 500;
     background-color: var(--orange-cl);
     padding: 0.5rem 1rem;
@@ -898,6 +900,7 @@ form button {
     gap: 0.5rem;
     font-size: 1.2rem;
     border-radius: 3rem;
+    box-shadow: var(--box-shadow-input);
 }
 
 form #error {
