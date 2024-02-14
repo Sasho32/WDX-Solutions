@@ -11,7 +11,9 @@ function updateScrollPadding() {
 }
 
 // Initial call to set scroll padding on page load
-updateScrollPadding();
+document.addEventListener('DOMContentLoaded', event => {
+    updateScrollPadding();
+});
 
 // Event listener to update scroll padding on window resize
 window.addEventListener('resize', updateScrollPadding);
