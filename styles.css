@@ -1059,13 +1059,14 @@ div#dialog > button {
 
     .heading-reveal.hidden {
         grid-template-rows: 1fr;
-        transform: translateY(10%);
-        opacity: 0;
+        /* transform: translateY(10%); */
+        /* opacity: 0; */
     }
 
     .heading-reveal {
+        overflow: hidden;
         padding-block: 0.5rem;
-        transition: all 1s ease-in-out;
+        /* transition: all 1s ease-in-out; */
     }
 
     .heading-reveal.hidden::before {
@@ -1078,9 +1079,17 @@ div#dialog > button {
         height: 1px;
         left: 0;
         bottom: 0;
-        transition: all 500ms ease-in-out 1s;
+        transition: all 400ms ease-in-out 200ms;
         background-color: var(--graphite-cl);
         width: 100%;
+    }
+
+    .heading-reveal.hidden > h2 {
+        transform: translateY(300px);
+    }
+
+    h2 {
+        transition: all 700ms ease-in-out 600ms;
     }
 
     .main-heading {
