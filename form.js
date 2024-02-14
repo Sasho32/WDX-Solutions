@@ -65,7 +65,7 @@ form.addEventListener('submit', e => {
         return result;
     }, {});
 
-    fetch('https://formspree.io/f/xjvnwgyl', {
+    fetch('https://formspree.io/f/mgegkknn', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
