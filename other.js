@@ -1,9 +1,11 @@
 function updateScrollPadding() {
     if (window.innerWidth < 1000) {
+        document.documentElement.style.setProperty('--scroll-padding', '0');
         return;
     }
 
     const navigationHeight = document.querySelector('nav').offsetHeight;
+
     document.documentElement.style.setProperty(
         '--scroll-padding',
         navigationHeight + 'px'
