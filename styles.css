@@ -125,6 +125,7 @@ body.show-side-socials #side-socials {
     z-index: 1;
     opacity: 1;
     pointer-events: all;
+    transform: translateY(-50%);
 }
 
 div#side-socials {
@@ -218,7 +219,7 @@ nav {
     align-items: center;
     box-shadow: var(--box-shadow-input);
     padding: 0.8rem;
-    z-index: 12;
+    z-index: 121;
 }
 
 .logo > span {
@@ -246,7 +247,7 @@ a {
 
 #cv-btn {
     background: var(--graphite-cl);
-    color: var(--white);
+    color: var(--box-bg);
     border-radius: 0.6rem;
     padding: 0.5rem 1rem;
 }
@@ -373,6 +374,11 @@ section#buttons {
     background-color: transparent;
     color: var(--graphite-cl);
     border: 1px solid;
+}
+
+a#profile-pic {
+    border-radius: 50%;
+    min-height: 400px;
 }
 
 a#profile-pic > img.hidden {
@@ -731,6 +737,12 @@ section#quiz-app ul {
     gap: 0.5rem;
 }
 
+body.dark-theme > section#quiz-app ul > li > img {
+    border-radius: 50%;
+    background-color: #d1d9e0;
+    padding: 0.2rem;
+}
+
 section#quiz-app > section li {
     color: var(--graphite-cl);
     display: flex;
@@ -985,7 +997,7 @@ form.loading button {
     width: 1.2rem;
     height: 1.2rem;
     border: 2px solid;
-    border-color: var(--white) transparent;
+    border-color: var(--button-cl) transparent;
     border-radius: 50%;
     display: none;
     box-sizing: border-box;
@@ -1267,6 +1279,10 @@ div#dialog > button {
     section#info a {
         font-size: var(--fs-p-m);
         font-weight: 400;
+    }
+
+    a#profile-pic {
+        min-height: 310px;
     }
 
     a#profile-pic > img {
@@ -1569,6 +1585,7 @@ div#dialog > button {
 
     div#success-message {
         left: 1rem;
+        top: 6rem;
     }
 
     div#success-message {
