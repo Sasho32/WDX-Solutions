@@ -46,12 +46,13 @@
         />
         <link rel="stylesheet" href="./styles.css" />
         <script src="./menu.js" defer></script>
+        <script src="./theme.js" defer></script>
         <script src="./other.js" defer></script>
         <script src="./fixed-icons.js" defer></script>
         <script src="./copyright-year.js" defer></script>
         <script src="./form.js" defer></script>
     </head>
-    <body class="menu-closed">
+    <body class="menu-opened">
         <nav>
             <a class="logo closer" href="#">
                 <span>WDX <span>Solutions</span></span>
@@ -84,6 +85,10 @@
                         Download CV
                     </a>
                 </li>
+                <li>
+                    <i class="fa-solid fa-moon desktop"></i>
+                    <i class="fa-solid fa-sun desktop"></i>
+                </li>
             </ul>
         </nav>
         <a href="#" id="mobile-logo" class="logo fade-in hidden">
@@ -91,6 +96,8 @@
         </a>
         <i id="menu-opener" class="fade-in hidden fa-solid fa-bars"></i>
         <i id="menu-closer" class="fade-in hidden fa-solid fa-xmark"></i>
+        <i class="fade-in hidden fa-solid fa-moon mobile"></i>
+        <i class="fade-in hidden fa-solid fa-sun mobile"></i>
         <div id="side-socials">
             <a
                 class="hidden"
