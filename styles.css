@@ -31,7 +31,6 @@
     --box-bg: rgba(255, 255, 255, 0.85);
     --footer-bg: #434343;
     --footer-cl: #fff;
-    --footer-cl: #d1d9e0;
 
     --box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
         rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -54,6 +53,7 @@
     /* --box-bg: #424242; */
     --box-bg: rgba(66, 66, 66, 0.85);
     --footer-bg: #212121;
+    --footer-cl: #d1d9e0;
     --orange-cl: hsl(22, 75%, 50%);
     --error-red: #ed4337;
     --white: #212121;
@@ -740,8 +740,6 @@ section#quiz-app > section li {
 
 section#quiz-app > section img {
     width: 40px;
-    border-radius: 50%;
-    background-color: var(--lightbulb-bg);
 }
 
 section#quiz-app > section a {
