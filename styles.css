@@ -1255,7 +1255,7 @@ div#dialog > button {
         align-self: flex-end;
         padding: 0.5rem 1rem;
         background-color: var(--graphite-cl);
-        border-radius: 0.6rem;
+        border-radius: 3rem;
         order: 7;
     }
 
