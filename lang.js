@@ -1,6 +1,7 @@
 const flagMap = {
     en: { src: './img/uk-flag.svg', alt: 'UK flag' },
     bg: { src: './img/bg-flag.png', alt: 'Bulgarian flag' },
+    es: { src: './img/es-flag.png', alt: 'Spanish flag' },
 };
 
 let currentLang = localStorage.getItem('lang') || 'en';

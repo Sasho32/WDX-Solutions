@@ -9,3 +9,9 @@
   to = "/index-bg.html"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/es/*"
+  to = "/index-es.html"
+  status = 200
+  force = true
