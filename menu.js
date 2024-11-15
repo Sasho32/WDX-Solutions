@@ -24,9 +24,11 @@ document.addEventListener(
         const isClickedNav =
             e.target.matches('nav') ||
             e.target.closest('nav') ||
-            e.target.matches('.fa-sun.mobile, .fa-moon.mobile');
+            e.target.closest('.bulb');
         if (document.body.classList.contains('menu-opened') && !isClickedNav)
             closeMenu();
+
+        console.log(e.target.matches('.bulb'));
     },
     { capture: true }
 );

@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/en/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/bg/*"
+  to = "/index-bg.html"
+  status = 200
+  force = true
