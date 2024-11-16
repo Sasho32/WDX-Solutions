@@ -45,28 +45,33 @@
     --fs-p-m: 1rem;
     --fs-sh-m: 1.5rem;
     --fs-h-m: 2rem;
+
+    --download-blue: rgb(125, 151, 244);
+    --cv-btn-bg: #434343;
 }
 
 :root:has(.dark-theme) {
-    --graphite-cl: #d1d9e0;
-    --text-cl: #d1d9e0;
+    --graphite-cl: #e0e0e0;
+    --text-cl: #e0e0e0;
 
-    --body-bg: #303030;
+    --body-bg: #313131;
     /* --box-bg: #424242; */
-    --box-bg: rgba(66, 66, 66, 0.85);
+    --box-bg: hsla(0, 0%, 14%, 0.85);
     --footer-bg: #212121;
-    --footer-cl: #d1d9e0;
+    --footer-cl: #e0e0e0;
     --input-bg: #d1d9e0;
     --input-cl: rgba(66, 66, 66);
     --orange-cl: hsl(22, 75%, 50%);
     --error-red: #ed4337;
     --white: #212121;
-    --button-cl: #d1d9e0;
+    --button-cl: #e0e0e0;
     --white-trnsp: rgba(33, 33, 33, 0.85);
-    --lightbulb-bg: #d1d9e0;
+    --lightbulb-bg: #e0e0e0;
     --box-shadow: none;
     --box-shadow-input: none;
     --box-shadow-flag: none;
+    --download-blue: rgb(102, 106, 246);
+    --cv-btn-bg: #fff;
 }
 
 /* theme */
@@ -234,11 +239,15 @@ a {
 }
 
 #cv-btn {
-    background: var(--graphite-cl);
-    color: var(--white);
     /* border-radius: 0.6rem; */
+    background-color: var(--cv-btn-bg);
+    color: var(--white);
     border-radius: 3rem;
     padding: 0.5rem 1rem;
+}
+
+#cv-btn i {
+    color: var(--download-blue);
 }
 /* nav */
 
@@ -649,7 +658,8 @@ section#expertise img.hidden {
 section#expertise img {
     width: 500px;
     border-radius: 1rem;
-    box-shadow: var(--box-shadow);
+    /* box-shadow: var(--box-shadow); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     opacity: 1;
 }
 
@@ -1254,14 +1264,13 @@ div#dialog > button {
         margin-block-start: auto;
         align-self: flex-end;
         padding: 0.5rem 1rem;
-        background-color: var(--graphite-cl);
+        background: var(--cv-btn-bg);
         border-radius: 3rem;
         order: 7;
     }
 
     #cv-btn {
         padding: 0;
-        color: var(--box-bg);
     }
 
     /* mobile logo */
@@ -1474,7 +1483,6 @@ div#dialog > button {
     section#expertise img {
         width: 200px;
         border-radius: 1rem;
-        box-shadow: var(--box-shadow);
     }
 
     section#expertise img:nth-of-type(1) {
