@@ -17,8 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const flagImage = document.querySelector('li img.flag');
 
     if (flagMap[currentLang]) {
-        flagImage.src = flagMap[currentLang || DEFAULT_LANG].src;
-        flagImage.alt = flagMap[currentLang || DEFAULT_LANG].alt;
+        flagImage.src = flagMap[currentLang].src;
+        flagImage.alt = flagMap[currentLang].alt;
+    } else {
+        flagImage.src = flagMap[DEFAULT_LANG].src;
+        flagImage.alt = flagMap[DEFAULT_LANG].alt;
     }
 
     if (currentLang && currentLang !== DEFAULT_LANG) loadContent(currentLang);
