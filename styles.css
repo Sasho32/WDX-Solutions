@@ -31,7 +31,7 @@
     --footer-bg: #434343;
     --footer-cl: #fff;
     --box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-    --box-shadow-input: 0 0 5px rgba(0, 0, 0, 0.5);
+    --box-shadow-input: 0 0 3px rgba(0, 0, 0, 0.5);
     --box-shadow-flag: 0 1px 3px rgba(0, 0, 0, 0.5);
     --fs-p: 1.2rem;
     --fs-sh: 1.8rem;
@@ -198,7 +198,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: var(--box-shadow-input);
+    box-shadow: var(--box-shadow);
     padding: 0.8rem;
     z-index: 121;
 }
