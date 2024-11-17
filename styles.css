@@ -341,8 +341,7 @@ h1.hidden {
 h1 {
     overflow: hidden;
     border-right: 3px solid transparent;
-    /* white-space: nowrap; */
-    /* was breaking the hero heading */
+    white-space: nowrap;
     margin: 0;
     width: auto;
     animation: typing 2s steps(40, end) forwards,
@@ -1213,7 +1212,7 @@ div#dialog > button {
     }
 
     .main-heading {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         letter-spacing: -2px;
         padding-inline-end: 5px;
     }
