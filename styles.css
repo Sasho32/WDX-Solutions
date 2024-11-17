@@ -1653,7 +1653,7 @@ div#dialog > button {
     form select,
     form textarea {
         padding: 0.5rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     label {

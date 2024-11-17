@@ -1,25 +1,27 @@
+const DEFAULT_LANG = 'en';
+
 const flagMap = {
     en: { src: './img/uk-flag.svg', alt: 'UK flag' },
     bg: { src: './img/bg-flag.png', alt: 'Bulgarian flag' },
     es: { src: './img/es-flag.png', alt: 'Spanish flag' },
 };
 
-let currentLang = localStorage.getItem('lang') || 'en';
+let currentLang = localStorage.getItem('lang');
 const currentPath = window.location.pathname;
 
 document.addEventListener('DOMContentLoaded', () => {
     document
-        .querySelector(`[data-value='${currentLang}']`)
+        .querySelector(`[data-value='${currentLang || DEFAULT_LANG}']`)
         .classList.add('selected');
 
     const flagImage = document.querySelector('li img.flag');
 
     if (flagMap[currentLang]) {
-        flagImage.src = flagMap[currentLang].src;
-        flagImage.alt = flagMap[currentLang].alt;
+        flagImage.src = flagMap[currentLang || DEFAULT_LANG].src;
+        flagImage.alt = flagMap[currentLang || DEFAULT_LANG].alt;
     }
 
-    loadContent(currentLang);
+    if (currentLang && currentLang !== DEFAULT_LANG) loadContent(currentLang);
 });
 
 Array.from(document.querySelectorAll('.lang-option')).forEach(option => {
