@@ -229,7 +229,7 @@ a {
     background-color: var(--cv-btn-bg);
     color: var(--white);
     border-radius: 3rem;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1rem;
     font-weight: 600;
 }
 
@@ -812,7 +812,7 @@ section#quiz-app > section a {
     text-decoration: none;
     align-self: flex-start;
     border-radius: 3rem;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 1rem;
     font-weight: 500;
     font-size: var(--fs-p);
     box-shadow: var(--box-shadow-input);
@@ -915,7 +915,7 @@ form textarea {
     background-color: var(--input-bg);
     color: var(--input-cl);
     box-shadow: var(--box-shadow-input);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 form div#service-input {
@@ -949,6 +949,7 @@ form div#service-input > i {
     box-shadow: var(--box-shadow);
     display: none;
     color: var(--input-cl);
+    z-index: 1;
 }
 
 form div#service-input.opened > i {
@@ -961,7 +962,7 @@ form div#service-input.opened > #service-options {
 
 .option {
     padding: 0.7rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: var(--input-cl);
 }
 
@@ -983,7 +984,7 @@ form button {
     border-radius: 3rem;
     font-weight: 500;
     background-color: var(--orange-cl);
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 1rem;
     border: none;
     outline: none;
     /* color: var(--white); */
@@ -1011,7 +1012,7 @@ form #error {
     gap: 2rem;
 }
 
-@container form (max-width: 460px) {
+@container form (max-width: 610px) {
     .input-fields {
         display: flex;
         flex-direction: column;
@@ -1035,7 +1036,23 @@ label {
     align-items: center;
     gap: 0.5rem;
     color: var(--graphite-cl);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    position: relative;
+    align-self: flex-start;
+    font-weight: 500;
+}
+
+label > i {
+    font-size: 1rem;
+}
+
+.input-field.required > label::after {
+    content: '*';
+    color: var(--orange-cl);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(calc(100% + 4px));
 }
 
 form.loading .loader {
@@ -1253,7 +1270,7 @@ div#dialog > button {
     li:has(#cv-btn) {
         margin-block-start: auto;
         align-self: flex-end;
-        padding: 0.5rem 1rem;
+        padding: 0.4rem 1rem;
         background: var(--cv-btn-bg);
         border-radius: 3rem;
         order: 7;
@@ -1641,7 +1658,10 @@ div#dialog > button {
 
     label {
         font-size: 1rem;
-        gap: 0.3rem;
+    }
+
+    label > i {
+        font-size: 0.8rem;
     }
 
     .option {
