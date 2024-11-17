@@ -12,14 +12,12 @@
     scroll-behavior: smooth;
     --scoll-padding: 0;
     scroll-padding: var(--scroll-padding);
-
     --graphite-cl: #434343;
     --text-cl: #434343;
     --orange-cl: #ff5e00;
     --error-red: #ed4337;
     --white: #fff;
     --button-cl: #fff;
-
     --input-bg: hsl(0, 0%, 95%);
     --input-cl: #434343;
     --body-bg: linear-gradient(
@@ -32,20 +30,15 @@
     --box-bg: rgba(255, 255, 255, 0.85);
     --footer-bg: #434343;
     --footer-cl: #fff;
-
-    --box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-        rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    --box-shadow-input: rgba(0, 0, 0, 0.24) 0px 0px 3px 1px;
-    --box-shadow-flag: rgba(0, 0, 0, 0.24) 0px 0px 1px 1px;
-
+    --box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    --box-shadow-input: 0 0 5px rgba(0, 0, 0, 0.5);
+    --box-shadow-flag: 0 1px 3px rgba(0, 0, 0, 0.5);
     --fs-p: 1.2rem;
     --fs-sh: 1.8rem;
     --fs-h: 2.5rem;
-
     --fs-p-m: 1rem;
     --fs-sh-m: 1.5rem;
     --fs-h-m: 2rem;
-
     --download-blue: rgb(125, 151, 244);
     --cv-btn-bg: #434343;
 }
@@ -53,13 +46,11 @@
 :root:has(.dark-theme) {
     --graphite-cl: #e0e0e0;
     --text-cl: #e0e0e0;
-
     --body-bg: #313131;
-    /* --box-bg: #424242; */
     --box-bg: hsla(0, 0%, 14%, 0.85);
     --footer-bg: #212121;
     --footer-cl: #e0e0e0;
-    --input-bg: #d1d9e0;
+    --input-bg: #e0e0e0;
     --input-cl: rgba(66, 66, 66);
     --orange-cl: hsl(22, 75%, 50%);
     --error-red: #ed4337;
@@ -67,9 +58,6 @@
     --button-cl: #e0e0e0;
     --white-trnsp: rgba(33, 33, 33, 0.85);
     --lightbulb-bg: #e0e0e0;
-    --box-shadow: none;
-    --box-shadow-input: none;
-    --box-shadow-flag: none;
     --download-blue: rgb(102, 106, 246);
     --cv-btn-bg: #fff;
 }
@@ -353,7 +341,8 @@ h1.hidden {
 h1 {
     overflow: hidden;
     border-right: 3px solid transparent;
-    white-space: nowrap;
+    /* white-space: nowrap; */
+    /* was breaking the hero heading */
     margin: 0;
     width: auto;
     animation: typing 2s steps(40, end) forwards,
@@ -506,7 +495,7 @@ section#social-media-icons > a > i {
     }
 
     .option:hover {
-        background-color: hsl(0, 0%, 90%);
+        background-color: hsl(0, 0%, 80%);
     }
 
     form button {
@@ -659,7 +648,7 @@ section#expertise img {
     width: 500px;
     border-radius: 1rem;
     /* box-shadow: var(--box-shadow); */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    box-shadow: var(--box-shadow-input);
     opacity: 1;
 }
 
