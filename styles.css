@@ -1041,6 +1041,9 @@ label {
 form.loading .loader {
     display: inline-block;
 }
+form.loading ion-icon[name*='rocket'] {
+    display: none;
+}
 
 form.loading button {
     pointer-events: none;
