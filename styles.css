@@ -20,12 +20,13 @@
     --button-cl: #fff;
     --input-bg: hsl(0, 0%, 95%);
     --input-cl: #434343;
-    --body-bg: linear-gradient(
+    /* --body-bg: linear-gradient(
         to right,
         rgb(215, 223, 252) 0%,
         rgb(255, 255, 255) 0%,
         rgb(215, 223, 252) 84%
-    );
+    ); */
+    --body-bg: hsl(227, 86%, 96%);
     --lightbulb-bg: transparent;
     --box-bg: rgba(255, 255, 255, 0.85);
     --footer-bg: #434343;
@@ -39,7 +40,6 @@
     --fs-p-m: 1rem;
     --fs-sh-m: 1.5rem;
     --fs-h-m: 2rem;
-    --download-blue: rgb(125, 151, 244);
     --cv-btn-bg: #434343;
 }
 
@@ -58,7 +58,6 @@
     --button-cl: #e0e0e0;
     --white-trnsp: rgba(33, 33, 33, 0.85);
     --lightbulb-bg: #e0e0e0;
-    --download-blue: rgb(102, 106, 246);
     --cv-btn-bg: #fff;
 }
 
@@ -94,9 +93,8 @@ textarea::-webkit-scrollbar-thumb {
 body {
     display: flex;
     flex-direction: column;
-
     background: var(--body-bg);
-
+    transition: all 180ms;
     /* min-height: 500vh; */
     overflow-x: hidden;
 }
@@ -232,10 +230,11 @@ a {
     color: var(--white);
     border-radius: 3rem;
     padding: 0.5rem 1rem;
+    font-weight: 600;
 }
 
 #cv-btn i {
-    color: var(--download-blue);
+    color: var(--orange-cl);
 }
 /* nav */
 
